@@ -9,4 +9,7 @@ def find_multiple_in_a_multiple_in_b(A, B):
 A = [1, 2, 3, 4, 5, 6, 2, 5, 7]
 B = [2, 2, 3, 3, 7, 8, 9, 3]
 
-print(find_multiple_in_a_multiple_in_b(A, B))
+A1 = list(input('Введите массив А через пробел\n').split())
+B1 = list(input('Введите массив B через пробел\n').split())
+
+print(f'Результат с примерными данными:\n{find_multiple_in_a_multiple_in_b(A, B)}\nРезультат в введёнными данными:\n{find_multiple_in_a_multiple_in_b(A1, B1)}')
