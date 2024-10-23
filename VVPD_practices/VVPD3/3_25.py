@@ -9,7 +9,24 @@ def find_unique_in_a_unique_in_b(A, B):
 A = [1, 2, 3, 4, 5, 6, 2, 5, 7]
 B = [2, 2, 3, 3, 7, 8, 9, 3]
 
-A1 = list(input('Введите массив А через пробел\n').split())
-B1 = list(input('Введите массив B через пробел\n').split())
-
-print(f'Результат с примерными данными:\n{find_unique_in_a_unique_in_b(A, B)}\nРезультат в введёнными данными:\n{find_unique_in_a_unique_in_b(A1, B1)}')
+menu = '''Выберите действие(ввести цифру):
+1 Выполнить программу с собственными данными
+2 Выполнить программу с данными-примерами
+3 Вывести меню
+0 Остановить программу'''
+print(menu)
+while True:
+    ind = input()
+    match ind:
+        case '1':
+            A1 = list(input('Введите массив А через пробел\n').split())
+            B1 = list(input('Введите массив B через пробел\n').split())
+            print(f'Результат в введёнными данными:\n{find_unique_in_a_unique_in_b(A1, B1)}')
+        case '2':
+            print(f'Результат с примерными данными:\n{find_unique_in_a_unique_in_b(A, B)}')
+        case '3':
+            print(menu)
+        case '0':
+            break
+        case _:
+            print('Пожалуйста следуйте инструкции')
